@@ -6,7 +6,7 @@ const chalk = require('chalk');
 console.log(chalk.blue("Welcome to HOW WELL DO YOU KNOW SIDDHANT, "+ name + "."))
 function play(question, answer){
   var questionNow = readlineSync.question(question)
-  if (questionNow === answer) {
+   if (questionNow.toLowerCase() === answer.toLowerCase()) {
     console.log(chalk.green("You're right! ")); score = score+1
    }else{
      console.log((chalk.red("You're wrong :( "))); score = score-1
